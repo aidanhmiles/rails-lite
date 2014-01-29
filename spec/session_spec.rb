@@ -7,7 +7,7 @@ describe Session do
 
   it "deserializes json cookie if one exists" do
     req.cookies << cook
-    p cook
+    p cook.to_s
     session = Session.new(req)
     session['xyz'].should == 'abc'
   end
